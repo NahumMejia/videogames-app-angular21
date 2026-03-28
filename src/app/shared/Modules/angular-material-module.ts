@@ -33,6 +33,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const MATERIAL_MODULES = [
   MatAutocompleteModule,
@@ -66,6 +67,7 @@ const MATERIAL_MODULES = [
   MatTabsModule,
   MatTooltipModule,
   MatTreeModule,
+  MatToolbarModule,
 ];
 
 @NgModule({
