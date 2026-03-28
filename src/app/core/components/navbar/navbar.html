@@ -1,0 +1,5 @@
+<mat-toolbar class="navbar">
+  @for (navBarItem of navBarItems; track navBarItem) {
+    <span class="navbarItems" [routerLink]="navBarItem.url" >{{ navBarItem.label}}</span>
+  }
+</mat-toolbar>

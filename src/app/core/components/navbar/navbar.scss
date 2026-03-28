@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(87, 115, 116);
+    border: 2px solid;
+}
+
+.navbarItems{
+    cursor: pointer;
+    color: white;
+}
