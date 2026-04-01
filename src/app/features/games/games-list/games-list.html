@@ -1,5 +1,8 @@
+@if (isLoading()) {
+  <app-loader/>
+}
 <div class="videogames-cards">
-  @for (game of games; track $index) {
+  @for (game of games(); track game.id) {
     <app-game-card [game]="game" />
   }
 </div>
