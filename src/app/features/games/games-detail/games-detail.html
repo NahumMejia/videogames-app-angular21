@@ -1,2 +1,29 @@
-<p class="game-title">{{game?.name}}</p>
+@if (isLoading()) {
+  <app-loader />
+} @else {
+  @if (game()) {
+    <article class="game-content">
+      <header class="game-header">
+        <h1 class="game-title">
+          {{ game()?.name }}
+        </h1>
+      </header>
 
+      <section class="game-description">
+        <h2 class="description-title">Description</h2>
+
+        <p>
+          {{ game()?.description_raw }}
+        </p>
+      </section>
+      <section class="image">
+        <img [src]="game()?.background_image" height="400" width="auto"/>
+      </section>
+      <section>
+        <p>
+            {{game()?.rating}}
+        </p>
+      </section>
+    </article>
+  }
+}

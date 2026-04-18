@@ -1,4 +1,19 @@
 .game-title{
-    font-size:xx-large;
     text-align: center;
+    font-weight: normal;
+}
+
+.game-content{
+    margin: 20px;
+}
+
+.description-title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
