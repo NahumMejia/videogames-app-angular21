@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { VideogameService } from '../../../shared/services/videogame.service';
-import { Game, GameList } from '../../../shared/interfaces/games.interface';
+import { Game, GameList } from '../../../shared/interfaces/games-list.interface';
 import { GameCard } from "../../../core/components/game-card/game-card";
 import { Loader } from "../../../core/components/loader/loader";
 
@@ -12,7 +12,7 @@ import { Loader } from "../../../core/components/loader/loader";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesList implements OnInit {
-  private readonly gamesService = inject(VideogameService);
+  private readonly videoGamesService = inject(VideogameService);
 
   public games = signal<Game[]>([]);
   public totalGames = signal<number>(0);
@@ -21,7 +21,7 @@ export class GamesList implements OnInit {
 
   ngOnInit(): void {
     this.isLoading.set(true);
-    this.gamesService.getGames().subscribe((response: GameList) => {
+    this.videoGamesService.getGames().subscribe((response: GameList) => {
       this.games.set(response.results);
       this.totalGames.set(response.count);
       this.nextPage.set(response.next);
