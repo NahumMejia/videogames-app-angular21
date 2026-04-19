@@ -9,21 +9,18 @@
         </h1>
       </header>
 
-      <section class="game-description">
-        <h2 class="description-title">Description</h2>
+      <div class="game-important-information">
+        <div class="image-container">
+          <img class="image" [src]="game()?.background_image" />
+        </div>
 
-        <p>
-          {{ game()?.description_raw }}
-        </p>
-      </section>
-      <section class="image">
-        <img [src]="game()?.background_image" height="400" width="auto"/>
-      </section>
-      <section>
-        <p>
-            {{game()?.rating}}
-        </p>
-      </section>
+        <div class="game-description">
+          <p>
+            {{ game()?.description_raw }}
+          </p>
+        </div>
+      </div>
+      
     </article>
   }
 }

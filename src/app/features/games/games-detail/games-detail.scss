@@ -1,19 +1,37 @@
-.game-title{
-    text-align: center;
-    font-weight: normal;
+.game-title {
+  text-align: center;
+  font-weight: normal;
 }
 
-.game-content{
-    margin: 20px;
+.game-content {
+  margin: 20px;
 }
 
-.description-title{
-    text-align: center;
-    font-weight: bold;
+.description-title {
+  text-align: center;
+  font-weight: bold;
 }
 
-.image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  margin: 2rem;
+  max-height: 250px;
+  width: auto;
+  max-width: 500px;
+}
+
+.game-important-information {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-description{
+    text-align: justify;
+    margin: 1rem;
+    height: 10rem;
 }

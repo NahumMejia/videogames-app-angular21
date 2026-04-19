@@ -3,10 +3,11 @@ import { VideogameService } from '../../../shared/services/videogame.service';
 import { ActivatedRoute } from '@angular/router';
 import { GameDetail } from '../../../shared/interfaces/game-detail.interface';
 import { Loader } from '../../../core/components/loader/loader';
+import { AngularMaterialModule } from "../../../shared/Modules/angular-material-module";
 
 @Component({
   selector: 'app-games-detail',
-  imports: [Loader],
+  imports: [Loader, AngularMaterialModule],
   templateUrl: './games-detail.html',
   styleUrl: './games-detail.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
